@@ -1,0 +1,5 @@
+_build/
+node_modules/
+.claude/
+CLAUDE.md
+.DS_Store

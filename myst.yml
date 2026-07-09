@@ -1,0 +1,160 @@
+version: 1
+project:
+  title: "Spyglass: A Reproducible & Interactive Preprint"
+  description: >-
+    An interactive, reproducible companion to "Spyglass: a framework for reproducible
+    and shareable neuroscience research" (Lee, Denovellis et al., bioRxiv 2024),
+    built with MyST and executable Jupyter notebooks.
+  authors:
+    - name: Kyu Hyun Lee
+      affiliations: [ucsf]
+      orcid: 0000-0001-6483-9444
+    - name: Eric L. Denovellis
+      affiliations: [ucsf]
+      orcid: 0000-0003-4606-087X
+    - name: Ryan Ly
+      affiliations: [lbnl]
+      orcid: 0000-0001-9238-0642
+    - name: Jeremy Magland
+      affiliations: [flatiron]
+      orcid: 0000-0002-5286-4375
+    - name: Jeff Soules
+      affiliations: [flatiron]
+      orcid: 0000-0002-2240-1038
+    - name: Alison E. Comrie
+      affiliations: [ucsf]
+      orcid: 0000-0002-2251-4892
+    - name: Daniel P. Gramling
+      affiliations: [tubingen]
+      orcid: 0009-0004-6136-3769
+    - name: Jennifer A. Guidera
+      affiliations: [ucsf]
+      orcid: 0000-0003-4013-214X
+    - name: Rhino Nevers
+      affiliations: [ucsf]
+    - name: Philip Adenekan
+      affiliations: [ucsf]
+      orcid: 0000-0002-4999-7847
+    - name: Chris Brozdowski
+      affiliations: [ucsf]
+      orcid: 0000-0002-3055-6718
+    - name: Samuel R. Bray
+      affiliations: [ucsf]
+      orcid: 0000-0002-9696-6920
+    - name: Emily Monroe
+      affiliations: [ucsf]
+      orcid: 0000-0002-5751-231X
+    - name: Ji Hyun Bak
+      affiliations: [ucsf]
+      orcid: 0000-0002-5700-7823
+    - name: Michael E. Coulter
+      affiliations: [ucsf]
+      orcid: 0000-0003-0357-351X
+    - name: Xulu Sun
+      affiliations: [ucsf]
+      orcid: 0000-0003-3076-0994
+    - name: Emrey Broyles
+      affiliations: [ucsf]
+      orcid: 0000-0001-5559-2910
+    - name: Donghoon Shin
+      affiliations: [ucsf]
+      orcid: 0009-0000-8916-7314
+    - name: Sharon Chiang
+      affiliations: [ucsf]
+      orcid: 0000-0002-4548-4550
+    - name: Cristofer Holobetz
+      affiliations: [swc]
+      orcid: 0009-0009-8567-3290
+    - name: Andrew Tritt
+      affiliations: [lbnl]
+      orcid: 0000-0002-1617-449X
+    - name: Oliver Rübel
+      affiliations: [lbnl]
+      orcid: 0000-0001-9902-1984
+    - name: Thinh Nguyen
+      affiliations: [datajoint]
+      orcid: 0000-0001-5964-5872
+    - name: Dimitri Yatsenko
+      affiliations: [datajoint]
+      orcid: 0000-0002-1844-641X
+    - name: Joshua Chu
+      affiliations: [rice]
+    - name: Caleb Kemere
+      affiliations: [rice]
+      orcid: 0000-0003-2054-0234
+    - name: Samuel Garcia
+      affiliations: [crnl]
+      orcid: 0000-0001-6389-9779
+    - name: Alessio Buccino
+      affiliations: [allen]
+      orcid: 0000-0003-3661-527X
+    - name: Loren M. Frank
+      affiliations: [ucsf]
+      email: loren.frank@ucsf.edu
+      corresponding: true
+      orcid: 0000-0002-1752-5677
+  affiliations:
+    - id: ucsf
+      name: University of California, San Francisco
+      ror: 043mz5j54
+    - id: lbnl
+      name: Lawrence Berkeley National Laboratory
+      ror: 02jbv0t02
+    - id: flatiron
+      name: Center for Computational Mathematics, Flatiron Institute
+      ror: 00sekdz59
+    - id: tubingen
+      name: University of Tübingen
+      ror: 03a1kwz48
+    - id: swc
+      name: Sainsbury Wellcome Centre, University College London
+      ror: 04kjqkz56
+    - id: datajoint
+      name: DataJoint
+      ror: 00zkxfr79
+    - id: rice
+      name: Rice University
+      ror: 008zs3103
+    - id: crnl
+      name: Centre de Recherche en Neuroscience de Lyon, CNRS
+      ror: 00pdd0432
+    - id: allen
+      name: Allen Institute for Brain Science
+      ror: 00dcv1019
+  doi: 10.1101/2024.01.25.577295
+  license: CC-BY-NC-4.0
+  github: https://github.com/LorenFrankLab/spyglass
+  downloads:
+    - title: "Spyglass Preprint PDF"
+      url: https://www.biorxiv.org/content/10.1101/2024.05.15.109870v1.full.pdf
+  toc:
+    - file: index.md
+    - title: Getting Started
+      children:
+        - file: notebooks/00_HubQuickStart.ipynb
+        - file: notebooks/00_Setup.ipynb
+        - file: notebooks/01_Concepts.ipynb
+        - file: notebooks/02_Insert_Data.ipynb
+        - file: notebooks/03_Data_Sync.ipynb
+        - file: notebooks/04_Merge_Tables.ipynb
+        - file: notebooks/04_PopulateConfigFile.ipynb
+        - file: notebooks/05_Export.ipynb
+    - title: Spike Sorting Pipeline
+      children:
+        - file: notebooks/10_Spike_SortingV0.ipynb
+        - file: notebooks/10_Spike_SortingV1.ipynb
+        - file: notebooks/11_Spike_Sorting_Analysis.ipynb
+    - title: Position Pipeline
+      children:
+        - file: notebooks/20_Position_Trodes.ipynb
+        - file: notebooks/21_DLC.ipynb
+        - file: notebooks/22_DLC_Loop.ipynb
+        - file: notebooks/24_Linearization.ipynb
+    - title: LFP Pipeline
+      children:
+        - file: notebooks/30_LFP.ipynb
+        - file: notebooks/31_Theta.ipynb
+site:
+  template: article-theme
+  options:
+    logo_text: "Spyglass"

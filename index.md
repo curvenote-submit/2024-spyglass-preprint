@@ -1,6 +1,19 @@
 ---
 title: "Spyglass: A Reproducible & Interactive Preprint"
 subtitle: An interactive companion to the Spyglass neuroscience data analysis framework
+abstract: >-
+  Scientific progress depends on reliable and reproducible results, which are
+  accelerated when data are shared and re-analyzed to address new questions.
+  Current approaches to storing and analyzing neural data involve bespoke formats
+  and software that make replication and reuse difficult. Spyglass is an
+  open-source data management and analysis framework, written in Python, that
+  addresses this need. It uses the Neurodata Without Borders (NWB) standard and
+  DataJoint-managed relational pipelines to provide reproducible analyses for
+  common neuroscience tasks — spectral filtering, spike sorting, pose tracking,
+  and neural decoding — and to support sharing of raw data, intermediate results,
+  and final outputs within and across labs. This site is an interactive,
+  executable companion to the original preprint, packaging its tutorials as
+  runnable Jupyter notebooks alongside a reproducible Docker environment.
 ---
 
 ## About this site

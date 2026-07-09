@@ -6,6 +6,19 @@ project:
     An interactive, reproducible companion to "Spyglass: a framework for reproducible
     and shareable neuroscience research" (Lee, Denovellis et al., bioRxiv 2024),
     built with MyST and executable Jupyter notebooks.
+  keywords:
+    - neuroscience
+    - reproducibility
+    - data management
+    - Neurodata Without Borders
+    - NWB
+    - DataJoint
+    - electrophysiology
+    - spike sorting
+    - neural decoding
+    - open source software
+    - FAIR data
+    - systems neuroscience
   authors:
     - name: Kyu Hyun Lee
       affiliations: [ucsf]
@@ -130,6 +143,11 @@ project:
   downloads:
     - title: "Spyglass Preprint PDF"
       url: https://www.biorxiv.org/content/10.1101/2024.05.15.109870v1.full.pdf
+  error_rules:
+    - rule: link-resolves
+      severity: ignore
+      keys:
+        - https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5
   toc:
     - file: index.md
     - title: Getting Started
@@ -157,6 +175,7 @@ project:
       children:
         - file: notebooks/30_LFP.ipynb
         - file: notebooks/31_Theta.ipynb
+    - file: data-review.md
 site:
   template: article-theme
   options:

@@ -121,6 +121,8 @@ project:
     - id: allen
       name: Allen Institute for Brain Science
       ror: 00dcv1019
+  thumbnail: thumbnail.png
+  banner: banner.png
   doi: 10.1101/2024.01.25.577295
   license: CC-BY-NC-4.0
   github: https://github.com/LorenFrankLab/spyglass

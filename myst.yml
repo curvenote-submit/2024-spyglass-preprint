@@ -1,5 +1,6 @@
 version: 1
 project:
+  id: 019f482b-edf8-7670-ac1c-a53f96947309
   title: "Spyglass: A Reproducible & Interactive Preprint"
   description: >-
     An interactive, reproducible companion to "Spyglass: a framework for reproducible

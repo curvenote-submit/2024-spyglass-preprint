@@ -158,13 +158,13 @@ project:
         - file: notebooks/02_Insert_Data.ipynb
         - file: notebooks/03_Data_Sync.ipynb
         - file: notebooks/04_Merge_Tables.ipynb
-        - file: notebooks/04_PopulateConfigFile.ipynb
         - file: notebooks/05_Export.ipynb
     - title: Spike Sorting Pipeline
       children:
         - file: notebooks/10_Spike_SortingV0.ipynb
         - file: notebooks/10_Spike_SortingV1.ipynb
         - file: notebooks/11_Spike_Sorting_Analysis.ipynb
+        - file: notebooks/12_Burst_Merge_Curation.ipynb
     - title: Position Pipeline
       children:
         - file: notebooks/20_Position_Trodes.ipynb
@@ -175,6 +175,18 @@ project:
       children:
         - file: notebooks/30_LFP.ipynb
         - file: notebooks/31_Theta.ipynb
+        - file: notebooks/32_Ripple_Detection.ipynb
+    - title: Decoding Pipeline
+      children:
+        - file: notebooks/40_Extracting_Clusterless_Waveform_Features.ipynb
+        - file: notebooks/41_Decoding_Clusterless.ipynb
+        - file: notebooks/42_Decoding_SortedSpikes.ipynb
+    - title: MUA Detection
+      children:
+        - file: notebooks/50_MUA_Detection.ipynb
+    - title: Behavior Syllables
+      children:
+        - file: notebooks/60_MoSeq.ipynb
     - file: data-review.md
 site:
   template: article-theme

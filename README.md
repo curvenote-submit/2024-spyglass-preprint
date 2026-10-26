@@ -35,7 +35,7 @@ This runs, in order:
 2. `scripts/sync-notebooks.sh`: replaces `notebooks/` and `notebook-images/` with the upstream versions, deleting files upstream no longer has (except those listed in `KEEP`).
 3. `scripts/update-toc.py`: regenerates the `myst.yml` table of contents, grouping notebooks by the first digit of their filename.
 
-Each step can also be run on its own. Afterwards, review the diff, update the notebook list in `index.md` by hand, and commit.
+Each step can also be run on its own. Afterwards, review the diff and commit. `index.md` deliberately doesn't list individual notebooks, so it needs no update.
 
 To install the same Spyglass build locally:
 

@@ -121,39 +121,11 @@ results and surface new findings from existing data.
 
 ## Notebooks
 
-The notebooks below walk through every Spyglass pipeline end to end, from setup and
+The Spyglass tutorial notebooks walk through every pipeline end to end, from setup and
 data ingestion through spike sorting, position tracking, LFP analysis, and neural
-decoding. Run them locally against the [Docker environment](https://quay.io/repository/lorenlab/hhmi-spyglass-image?tab=tags&tag=latest)
+decoding. They are listed in the navigation, grouped by pipeline. Run them locally
+against the [Docker environment](https://quay.io/repository/lorenlab/hhmi-spyglass-image?tab=tags&tag=latest)
 or adapt them to your own NWB data.
-
-### Getting started
-
-- [Quick Start Demo](notebooks/00_HubQuickStart.ipynb) — a tour of Spyglass's position, LFP, and spike sorting pipelines on a pre-ingested example dataset
-- [Setup](notebooks/00_Setup.ipynb) — installing and configuring Spyglass
-- [Concepts](notebooks/01_Concepts.ipynb) — the data structures and conventions used throughout Spyglass
-- [Insert Data](notebooks/02_Insert_Data.ipynb) — ingesting an NWB file into the Spyglass database
-- [Data Sync](notebooks/03_Data_Sync.ipynb) — sharing analysis files with collaborators via Kachery
-- [Merge Tables](notebooks/04_Merge_Tables.ipynb) — Spyglass's approach to versioning pipelines
-- [Customizing Data Insertion](notebooks/04_PopulateConfigFile.ipynb) — a configuration YAML for NWB files that don't follow Spyglass's naming conventions
-- [Export](notebooks/05_Export.ipynb) — exporting the data and parameters behind a set of results for sharing or publication
-
-### Spike sorting pipeline
-
-- [Spike Sorting (V0)](notebooks/10_Spike_SortingV0.ipynb)
-- [Spike Sorting (V1)](notebooks/10_Spike_SortingV1.ipynb)
-- [Spike Sorting Analysis](notebooks/11_Spike_Sorting_Analysis.ipynb) — organizing and tracking spike sorting results from any pipeline
-
-### Position pipeline
-
-- [Position Tracking with Trodes](notebooks/20_Position_Trodes.ipynb) — tracking LEDs on the animal's headstage
-- [Position Tracking with DeepLabCut](notebooks/21_DLC.ipynb) — tracking body parts with a neural network
-- [DeepLabCut over Multiple Epochs](notebooks/22_DLC_Loop.ipynb)
-- [Linearization](notebooks/24_Linearization.ipynb) — converting 2D position to 1D position using track geometry
-
-### LFP pipeline
-
-- [LFP](notebooks/30_LFP.ipynb) — extracting LFP bands from raw electrophysiology data
-- [Theta](notebooks/31_Theta.ipynb) — extracting theta band power and phase
 
 ## Links & resources
 

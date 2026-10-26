@@ -148,6 +148,18 @@ project:
       severity: ignore
       keys:
         - https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5
+  # Bundled into the MECA export, from which the BinderHub image is built.
+  # Notebooks are bundled because they are in the toc.
+  requirements:
+    - environment.yml
+    - apt.txt
+    - start
+    - wheels/*.whl
+  resources:
+    - notebook-images/*
+  exports:
+    - id: meca
+      format: meca
   toc:
     - file: index.md
     - title: Getting Started

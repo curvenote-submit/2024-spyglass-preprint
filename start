@@ -1,0 +1,25 @@
+#!/bin/bash
+
+MYSQL_AVAILABLE=$(command -v mysql &> /dev/null)
+SQL_FILE="/home/jovyan/shared-readonly/prepopulate.sql"
+LOG_FILE="/home/jovyan/populate_database.log"
+
+touch "$LOG_FILE"
+echo "# START JupyterHub data prepopulate: $(date)" >> "$LOG_FILE"
+
+if $MYSQL_AVAILABLE && [ -f "$SQL_FILE" ]; then
+    echo "Populating:  YES." >> "$LOG_FILE"
+    mysql -h 127.0.0.1 -u root --password=tutorial < "$SQL_FILE"
+    MYSQL_EXIT_STATUS=$?
+    if [ $MYSQL_EXIT_STATUS -ne 0 ]; then
+        echo "Populating: ERROR. $MYSQL_EXIT_STATUS" >> "$LOG_FILE"
+    else
+        echo "Populating:  OK.  " >> "$LOG_FILE"
+    fi
+elif ! $SQL_FILE_EXISTS; then
+    echo "Populating:  NO. Executable not found" >> "$LOG_FILE"
+else
+    echo "Populating:  NO. SQL file not found" >> "$LOG_FILE"
+fi
+
+exec "$@" 

@@ -157,6 +157,7 @@ project:
     - wheels/*.whl
   resources:
     - notebook-images/*
+    - notebooks/py_scripts/*.py
   exports:
     - id: meca
       format: meca

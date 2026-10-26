@@ -48,7 +48,7 @@ pip install wheels/spyglass_neuro-*.whl
 The image is built with repo2docker from the article's MECA export, not the whole repository. `curvenote.yml` controls what goes into the bundle:
 
 - `requirements`: `environment.yml`, `apt.txt`, `start` and `wheels/*.whl`
-- `resources`: `notebook-images/*`
+- `resources`: `notebook-images/*` and `notebooks/py_scripts/*.py`
 - notebooks are included because they are in the `toc`
 
 Any other file the image needs must be added to `requirements` or `resources`. To build the bundle and test the image locally:

@@ -41,6 +41,9 @@ dependencies:
       - ghostipy # for common_filter
       # Allows MyST Markdown in JupyterLab UI
       - jupyterlab_myst
+      # Imported by spyglass.spikesorting, decoding, mua and sharing, but only
+      # declared in Spyglass's `test` extra
+      - kachery-cloud>=0.4
       - ndx-franklab-novela>=0.1.0
       - mountainsort4
       - panel>=1.4

@@ -56,5 +56,7 @@ Any other file the image needs must be added to `requirements` or `resources`. T
 ```bash
 curvenote build --meca                        # writes _build/exports/curvenote.zip
 unzip -q _build/exports/curvenote.zip -d _build/meca
-repo2docker --no-run _build/meca/bundle
+repo2docker --Repo2Docker.platform=linux/amd64 --no-run --image-name spyglass-preprint:test _build/meca/bundle
 ```
+
+Always pass `--Repo2Docker.platform=linux/amd64`: an arm64 build (the default on Apple silicon) fails because some pinned conda packages don't exist for arm64. repo2docker skips the build if the image name already exists, so remove the old image or use a new name. Importing `spyglass` connects to the database, so test it alongside a `datajoint/mysql:8.0` container.

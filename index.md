@@ -31,9 +31,7 @@ and figures, it is meant to grow into a fully reproducible package where each an
 in the paper is backed by a runnable notebook, linked to its data and parameters.
 
 This article contains all of the Jupyter notebooks needed to explore and use Spyglass
-yourself — see [Notebooks](#notebooks) below. For a ready-to-run, reproducible
-environment with all dependencies pre-installed, use the Docker image:
-[quay.io/lorenlab/hhmi-spyglass-image](https://quay.io/repository/lorenlab/hhmi-spyglass-image?tab=tags&tag=latest).
+yourself — see [Notebooks](#notebooks) below.
 
 **Looking for the original paper?** Read the full preprint on bioRxiv:
 [biorxiv.org/content/10.1101/2024.01.25.577295v5](https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5)
@@ -123,14 +121,12 @@ results and surface new findings from existing data.
 
 The Spyglass tutorial notebooks walk through every pipeline end to end, from setup and
 data ingestion through spike sorting, position tracking, LFP analysis, and neural
-decoding. They are listed in the navigation, grouped by pipeline. Run them locally
-against the [Docker environment](https://quay.io/repository/lorenlab/hhmi-spyglass-image?tab=tags&tag=latest)
+decoding. They are listed in the navigation, grouped by pipeline. Run them as they are
 or adapt them to your own NWB data.
 
 ## Links & resources
 
 - Original preprint (bioRxiv): [10.1101/2024.01.25.577295v5](https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5)
-- Reproducible Docker environment: [quay.io/lorenlab/hhmi-spyglass-image](https://quay.io/repository/lorenlab/hhmi-spyglass-image?tab=tags&tag=latest)
 - Spyglass source & tutorials: [github.com/LorenFrankLab/spyglass](https://github.com/LorenFrankLab/spyglass)
 - Code for the paper's Figure 5 (cross-lab decoding demo): [github.com/LorenFrankLab/spyglass-paper](https://github.com/LorenFrankLab/spyglass-paper)
 - Data: Frank lab dataset [DANDI:000937](https://dandiarchive.org/dandiset/000937); Buzsáki lab dataset [DANDI:000059](https://dandiarchive.org/dandiset/000059)

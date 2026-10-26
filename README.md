@@ -1,6 +1,6 @@
 # Spyglass: A Reproducible & Interactive Preprint
 
-Source for the interactive companion to *Spyglass: a framework for reproducible and shareable neuroscience research* ([bioRxiv 10.1101/2024.01.25.577295](https://doi.org/10.1101/2024.01.25.577295)), published as a [MyST](https://mystmd.org) site through Curvenote. The same repository is the [repo2docker](https://repo2docker.readthedocs.io) source for the BinderHub image that runs the notebooks.
+Source for the interactive companion to *Spyglass: a framework for reproducible and shareable neuroscience research* ([bioRxiv 10.1101/2024.01.25.577295](https://doi.org/10.1101/2024.01.25.577295)), published as a [MyST](https://mystmd.org) site through Curvenote. The article's MECA export is the [repo2docker](https://repo2docker.readthedocs.io) source for the BinderHub image that runs the notebooks.
 
 ## Layout
 
@@ -45,8 +45,16 @@ pip install wheels/spyglass_neuro-*.whl
 
 ## Building the image
 
-repo2docker builds the image from the repository root. To test it locally:
+The image is built with repo2docker from the article's MECA export, not the whole repository. `curvenote.yml` controls what goes into the bundle:
+
+- `requirements`: `environment.yml`, `apt.txt`, `start` and `wheels/*.whl`
+- `resources`: `notebook-images/*`
+- notebooks are included because they are in the `toc`
+
+Any other file the image needs must be added to `requirements` or `resources`. To build the bundle and test the image locally:
 
 ```bash
-repo2docker --no-run .
+curvenote build --meca                        # writes _build/exports/curvenote.zip
+unzip -q _build/exports/curvenote.zip -d _build/meca
+repo2docker --no-run _build/meca/bundle
 ```

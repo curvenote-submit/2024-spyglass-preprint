@@ -1,6 +1,6 @@
 # AGENTS.md
 
-This repo is a Curvenote article (`curvenote.yml`, `index.md`) and the repo2docker source for its BinderHub image. Spyglass is pinned to one upstream commit in `SPYGLASS_COMMIT`; see `README.md` for the layout.
+This repo is a Curvenote article (`curvenote.yml`, `index.md`); its MECA export is the repo2docker source for the BinderHub image. Spyglass is pinned to one upstream commit in `SPYGLASS_COMMIT`; see `README.md` for the layout.
 
 ## Updating to a new Spyglass commit
 
@@ -18,5 +18,6 @@ This repo is a Curvenote article (`curvenote.yml`, `index.md`) and the repo2dock
 
 - Don't edit `notebooks/`, `notebook-images/` or the `toc:` block in `curvenote.yml` by hand; the scripts overwrite them. Notebooks maintained in this repo go in `KEEP` in `scripts/sync-notebooks.sh`.
 - Don't list individual notebooks in `index.md`; the TOC is the only notebook list.
-- Don't add Spyglass source to the repo (no submodule or vendored copy). repo2docker copies the whole repo into the image, and only the built wheel should ship.
+- Don't add Spyglass source to the repo (no submodule or vendored copy); only the built wheel should ship.
+- The image is built from the MECA export, which contains only the TOC pages plus `requirements` and `resources` in `curvenote.yml`. A file the image needs that isn't covered there won't be in it. Check with `curvenote build --meca` and look in `_build/exports/curvenote.zip`.
 - `.spyglass/` is a git-ignored scratch checkout; it's safe to delete.

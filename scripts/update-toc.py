@@ -1,4 +1,4 @@
-"""Regenerate the table of contents in myst.yml from the notebooks/ folder.
+"""Regenerate the table of contents in curvenote.yml from the notebooks/ folder.
 
 Notebooks are grouped by the first digit of their filename, following the
 batches in the Spyglass notebooks README. index.md comes first and
@@ -33,11 +33,11 @@ for digit, names in sorted(groups.items()):
     lines += [f"        - file: notebooks/{name}" for name in names]
 lines.append("    - file: data-review.md")
 
-myst = ROOT / "myst.yml"
+config = ROOT / "curvenote.yml"
 text, count = re.subn(
-    r"^  toc:\n(?:    .*\n)*", "\n".join(lines) + "\n", myst.read_text(), flags=re.M
+    r"^  toc:\n(?:    .*\n)*", "\n".join(lines) + "\n", config.read_text(), flags=re.M
 )
 if count != 1:
-    sys.exit("Could not find project.toc in myst.yml")
-myst.write_text(text)
-print(f"Updated myst.yml toc with {sum(map(len, groups.values()))} notebooks")
+    sys.exit("Could not find project.toc in curvenote.yml")
+config.write_text(text)
+print(f"Updated curvenote.yml toc with {sum(map(len, groups.values()))} notebooks")

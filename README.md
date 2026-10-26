@@ -6,7 +6,7 @@ Source for the interactive companion to *Spyglass: a framework for reproducible 
 
 | Path | What it is |
 | --- | --- |
-| `myst.yml`, `index.md`, `data-review.md` | The article and its table of contents |
+| `curvenote.yml`, `index.md`, `data-review.md` | The article and its table of contents |
 | `notebooks/`, `notebook-images/` | Spyglass tutorial notebooks, synced from upstream (do not edit by hand) |
 | `notebooks/00_HubQuickStart.ipynb` | Maintained here; kept by the sync |
 | `SPYGLASS_COMMIT` | The upstream Spyglass commit the article and image are built from |
@@ -33,7 +33,7 @@ This runs, in order:
 
 1. `scripts/build-wheel.sh`: checks out the commit into `.spyglass/` (git-ignored), builds `wheels/spyglass_neuro-<version>.whl`, removes the previous wheel and points `environment.yml` at the new one.
 2. `scripts/sync-notebooks.sh`: replaces `notebooks/` and `notebook-images/` with the upstream versions, deleting files upstream no longer has (except those listed in `KEEP`).
-3. `scripts/update-toc.py`: regenerates the `myst.yml` table of contents, grouping notebooks by the first digit of their filename.
+3. `scripts/update-toc.py`: regenerates the `curvenote.yml` table of contents, grouping notebooks by the first digit of their filename.
 
 Each step can also be run on its own. Afterwards, review the diff and commit. `index.md` deliberately doesn't list individual notebooks, so it needs no update.
 

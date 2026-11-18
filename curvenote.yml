@@ -142,7 +142,7 @@ project:
   github: https://github.com/LorenFrankLab/spyglass
   downloads:
     - title: "Spyglass Preprint PDF"
-      url: https://www.biorxiv.org/content/10.1101/2024.05.15.109870v1.full.pdf
+      url: https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5.full.pdf
     - id: meca
       title: "MECA bundle: notebooks and environment"
   error_rules:

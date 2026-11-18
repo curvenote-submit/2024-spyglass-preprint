@@ -143,6 +143,8 @@ project:
   downloads:
     - title: "Spyglass Preprint PDF"
       url: https://www.biorxiv.org/content/10.1101/2024.05.15.109870v1.full.pdf
+    - id: meca
+      title: "MECA bundle: notebooks and environment"
   error_rules:
     - rule: link-resolves
       severity: ignore

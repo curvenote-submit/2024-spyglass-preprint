@@ -13,4 +13,5 @@ fi
 
 scripts/build-wheel.sh
 scripts/sync-notebooks.sh
+python3 scripts/hub-callouts.py
 python3 scripts/update-toc.py

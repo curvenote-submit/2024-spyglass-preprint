@@ -9,9 +9,10 @@ Source for the interactive companion to *Spyglass: a framework for reproducible 
 | `curvenote.yml`, `index.md`, `data-review.md` | The article and its table of contents |
 | `notebooks/`, `notebook-images/` | Spyglass tutorial notebooks, synced from upstream (do not edit by hand) |
 | `notebooks/00_HubQuickStart.ipynb` | Maintained here; kept by the sync |
+| `notebooks/00_Spyglass_Smoke_Test.ipynb` and the hub-edited notebooks | From [curvenote/spyglass-preprint-tutorial](https://github.com/curvenote/spyglass-preprint-tutorial) (`binder-minimal-env`); kept by the sync (see [The BinderHub](#the-binderhub)) |
 | `SPYGLASS_COMMIT` | The upstream Spyglass commit the article and image are built from |
 | `wheels/` | Spyglass wheel built from that commit |
-| `environment.yml`, `apt.txt`, `start` | repo2docker configuration for the BinderHub image |
+| `environment.yml`, `apt.txt`, `postBuild`, `start`, `dj_local_conf.json` | repo2docker configuration for the BinderHub image |
 | `scripts/` | Utilities for updating all of the above |
 
 ## Pinned Spyglass version
@@ -33,7 +34,8 @@ This runs, in order:
 
 1. `scripts/build-wheel.sh`: checks out the commit into `.spyglass/` (git-ignored), builds `wheels/spyglass_neuro-<version>.whl`, removes the previous wheel and points `environment.yml` at the new one.
 2. `scripts/sync-notebooks.sh`: replaces `notebooks/` and `notebook-images/` with the upstream versions, deleting files upstream no longer has (except those listed in `KEEP`).
-3. `scripts/update-toc.py`: regenerates the `curvenote.yml` table of contents, grouping notebooks by the first digit of their filename.
+3. `scripts/hub-callouts.py`: adds a callout to the top of upstream notebooks that don't run on the BinderHub, and retitles `00_Setup` to "Local Machine Setup".
+4. `scripts/update-toc.py`: regenerates the `curvenote.yml` table of contents, grouping notebooks by the first digit of their filename.
 
 Each step can also be run on its own. Afterwards, review the diff and commit. `index.md` deliberately doesn't list individual notebooks, so it needs no update.
 
@@ -47,7 +49,7 @@ pip install wheels/spyglass_neuro-*.whl
 
 The image is built with repo2docker from the article's MECA export, not the whole repository. `curvenote.yml` controls what goes into the bundle:
 
-- `requirements`: `environment.yml`, `apt.txt`, `start` and `wheels/*.whl`
+- `requirements`: `environment.yml`, `apt.txt`, `postBuild`, `start`, `dj_local_conf.json` and `wheels/*.whl`
 - `resources`: `notebook-images/*` and `notebooks/py_scripts/*.py`
 - notebooks are included because they are in the `toc`
 
@@ -60,3 +62,16 @@ repo2docker --Repo2Docker.platform=linux/amd64 --no-run --image-name spyglass-pr
 ```
 
 Always pass `--Repo2Docker.platform=linux/amd64`: an arm64 build (the default on Apple silicon) fails because some pinned conda packages don't exist for arm64. repo2docker skips the build if the image name already exists, so remove the old image or use a new name. Importing `spyglass` connects to the database, so test it alongside a `datajoint/mysql:8.0` container.
+
+## The BinderHub
+
+The image runs on the Frank Lab BinderHub (`hhmi-frank`), where each user server has 2 GB of memory, one CPU and no GPU. The environment and notebooks come from [curvenote/spyglass-preprint-tutorial](https://github.com/curvenote/spyglass-preprint-tutorial) (branch `binder-minimal-env`), where they were tested on the hub:
+
+- `environment.yml` is pinned to the versions tested there; it installs Spyglass from the wheel rather than from GitHub. PyTorch, JupyterLab 3 extensions and `black` are left out.
+- MySQL 8.0 runs inside each user's container (`apt.txt`, `postBuild`, `start`), with the login in `dj_local_conf.json`. Nothing persists between servers.
+- `start` links the NWB files on the hub's read-only shared data disk into `~/spyglass_data/raw`. The disk holds `minirec20230622.nwb` only.
+
+Notebooks:
+
+- `00_Spyglass_Smoke_Test` checks the server is ready, and these notebooks are edited to run on minirec within the limits: `02`, `04`, `05`, `10_Spike_SortingV1`, `24`, `30`, `40`, `41` and `42`. Each edit is marked `Binder hub:`. They are in `KEEP`, so upstream changes have to be ported into them by hand.
+- `scripts/hub-callouts.py` adds a callout to the notebooks that don't run on the hub, saying why: `03`, `11`, `12`, `21`, `22`, `32`, `50` and `60`. It also adds one to `10_Spike_SortingV0` (runs except its last FigURL step), and one to `00_Setup`, which it retitles "Local Machine Setup". `00_HubQuickStart` has its own callout: it needs the previous hub's pre-populated database and the 32 GB `mediumnwb20230802.nwb`.

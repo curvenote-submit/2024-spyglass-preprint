@@ -170,6 +170,7 @@ project:
       children:
         - file: notebooks/00_HubQuickStart.ipynb
         - file: notebooks/00_Setup.ipynb
+        - file: notebooks/00_Spyglass_Smoke_Test.ipynb
         - file: notebooks/01_Concepts.ipynb
         - file: notebooks/02_Insert_Data.ipynb
         - file: notebooks/03_Data_Sync.ipynb

@@ -1,13 +1,15 @@
 # Spyglass environment for the curvenote BinderHub.
 #
-# Spyglass is installed from the wheel in wheels/, built by
-# scripts/build-wheel.sh from the commit in SPYGLASS_COMMIT (the code described
-# in bioRxiv v5 of the Spyglass preprint).
+# Spyglass is installed from the commit that curvenote/spyglass tags as
+# `snapshot/biorxiv-v5` (the code described in bioRxiv v5 of the Spyglass
+# preprint). That commit is on LorenFrankLab/spyglass `master`, so it is
+# installed from upstream:
+#   6122f076918cb0bbda220d71419848e9d71150a7  (2026-01-22, 0.5.5a2.dev33)
 #
 # Conda packages follow that commit's environments/environment.yml; pip
 # packages follow its pyproject.toml. Changes are marked "hub:". Versions are
-# pinned to what resolved when tested in curvenote/spyglass-preprint-tutorial
-# (branch binder-minimal-env, repo2docker 2026.4.0).
+# pinned to what resolved when this file was tested (repo2docker 2026.4.0);
+# binder/resolved-packages.txt has the full resolved set.
 name: spyglass
 channels:
   - conda-forge
@@ -38,8 +40,7 @@ dependencies:
       # kachery_cloud, but spyglass only lists it under [test] extras.
       - kachery-cloud==0.4.2
       - jupyterlab_myst==2.7.0  # MyST markdown in notebooks (as on the 2i2c hub)
-      # Built from SPYGLASS_COMMIT by scripts/build-wheel.sh
-      - ./wheels/spyglass_neuro-0.5.5a2.dev33+g6122f0769-py3-none-any.whl
+      - spyglass-neuro @ git+https://github.com/LorenFrankLab/spyglass.git@6122f076918cb0bbda220d71419848e9d71150a7
       # Pins for spyglass's own direct requirements (it leaves most unpinned).
       - datajoint==0.14.10
       - ndx-franklab-novela==0.2.3

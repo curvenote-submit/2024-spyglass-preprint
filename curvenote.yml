@@ -151,12 +151,8 @@ project:
   # Bundled into the MECA export, from which the BinderHub image is built.
   # Notebooks are bundled because they are in the toc.
   requirements:
-    - environment.yml
-    - apt.txt
-    - postBuild
-    - start
+    - binder/*
     - dj_local_conf.json
-    - wheels/*.whl
   resources:
     - notebook-images/*
     - notebooks/*.md

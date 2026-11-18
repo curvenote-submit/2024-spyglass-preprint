@@ -3,6 +3,3 @@ node_modules/
 .claude/
 CLAUDE.md
 .DS_Store
-
-# Spyglass checkout used by scripts/
-.spyglass/

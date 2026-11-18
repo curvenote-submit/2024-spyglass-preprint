@@ -1,55 +1,53 @@
-# This is the standard conda configuration file. Use this file to list
-# the conda packages that you need installed in your environment.
+# Spyglass environment for the curvenote BinderHub.
+#
+# Spyglass is installed from the wheel in wheels/, built by
+# scripts/build-wheel.sh from the commit in SPYGLASS_COMMIT (the code described
+# in bioRxiv v5 of the Spyglass preprint).
+#
+# Conda packages follow that commit's environments/environment.yml; pip
+# packages follow its pyproject.toml. Changes are marked "hub:". Versions are
+# pinned to what resolved when tested in curvenote/spyglass-preprint-tutorial
+# (branch binder-minimal-env, repo2docker 2026.4.0).
 name: spyglass
 channels:
   - conda-forge
-  - defaults
-  - pytorch   # dlc-only
   - franklab
   - edeno
 dependencies:
-# Jupyterhub dependencies
-  - jupyterlab>=3.*,<4 # leave at v3 to support jupyterlab-git
-  - jupyter_contrib_nbextensions==0.5.1
-  - jupyterlab-git
-  - nbgitpuller=1.1.*
-# Spyglass dependencies
-  - bottleneck
-  # - cudatoolkit=11.3 # dlc-only
-  # - ffmpeg # dlc-only
-  - ipympl
-  # - libgcc # dlc-only
-  - matplotlib
-  - non_local_detector
-  - numpy<1.24
-  - pip
-  - position_tools
-  - pybind11  # req by mountainsort4 -> isosplit5
-  - pydotplus
-  - pyfftw<=0.12.0  # ghostipy req. install from conda-forge for Mac ARM
-  - python>=3.9,<3.10
-  - pytorch<1.12.0
-  - ripple_detection
-  - seaborn
-  # - torchaudio # dlc-only
-  # - torchvision # dlc-only
-  - track_linearization>=2.3
+  - python=3.9.23  # spyglass CI (test-conda.yml) runs on 3.9
+  - pip=25.2
+  - bottleneck=1.5.0
+  - ipympl=0.9.7
+  # hub: matplotlib-base, not `matplotlib`, which adds Qt6 + LLVM (no GUI here)
+  - matplotlib-base=3.9.4
+  - non_local_detector=0.6.9  # brings jax/jaxlib 0.4.28 (CPU)
+  - numpy=1.26.4
+  - position_tools=0.2.2
+  - pybind11=3.1.0  # req by mountainsort4 -> isosplit5
+  - pydotplus=2.0.2
+  - pyfftw=0.12.0  # ghostipy req; upstream: <=0.12.0
+  # hub: dropped pytorch<1.12.0 (DeepLabCut only; nothing else imports torch,
+  # and it adds ~1 GB). DeepLabCut and MoSeq notebooks are not supported here.
+  - ripple_detection=1.5.1
+  - seaborn=0.13.2
+  - track_linearization=2.3.1
   - pip:
-      - "black[jupyter]"
-      - datajoint>=0.14.5
-      # - deeplabcut<2.3.0 # dlc-only
-      - ghostipy # for common_filter
-      # Allows MyST Markdown in JupyterLab UI
-      - jupyterlab_myst
-      # Imported by spyglass.spikesorting, decoding, mua and sharing, but only
-      # declared in Spyglass's `test` extra
-      - kachery-cloud>=0.4
-      - ndx-franklab-novela>=0.1.0
-      - mountainsort4
-      - panel>=1.4
-      - pubnub<=6.4.0
-      - pynwb>=2.2.0,<3
-      - sortingview>=0.11
-      - spikeinterface>=0.99.1,<0.100
+      - ghostipy==0.2.2 # for common_filter
+      - mountainsort4==1.0.7
+      # hub: added. spyglass.spikesorting.v1 and spyglass.decoding.v1 import
+      # kachery_cloud, but spyglass only lists it under [test] extras.
+      - kachery-cloud==0.4.2
+      - jupyterlab_myst==2.7.0  # MyST markdown in notebooks (as on the 2i2c hub)
       # Built from SPYGLASS_COMMIT by scripts/build-wheel.sh
       - ./wheels/spyglass_neuro-0.5.5a2.dev33+g6122f0769-py3-none-any.whl
+      # Pins for spyglass's own direct requirements (it leaves most unpinned).
+      - datajoint==0.14.10
+      - ndx-franklab-novela==0.2.3
+      - ndx-optogenetics==0.2.0
+      - ndx-pose==0.2.2
+      - panel==1.4.5
+      - probeinterface==0.2.28
+      - pubnub==6.3.3
+      - pynwb==2.8.3
+      - sortingview==0.14.2
+      - spikeinterface==0.99.1

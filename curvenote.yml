@@ -153,7 +153,9 @@ project:
   requirements:
     - environment.yml
     - apt.txt
+    - postBuild
     - start
+    - dj_local_conf.json
     - wheels/*.whl
   resources:
     - notebook-images/*

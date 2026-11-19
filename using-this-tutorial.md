@@ -58,9 +58,9 @@ To install Spyglass and set up its database yourself, follow
 environment used on this site, including its pinned package versions, is in the
 downloadable MECA bundle, under `binder/`.
 
-:::{card} Start here: Spyglass Smoke Test →
-:link: ./notebooks/00_Spyglass_Smoke_Test.ipynb
+## Start here
 
-Launch the notebooks and check that your server is ready, then work through the
-tutorials in order.
-:::
+Open the smoke test and press **Start and Run** to launch your server and check that it's
+ready. Then work through the tutorials in order.
+
+[![The Spyglass smoke test page, with its Start and Run button](./tldr-go-to-smoke-test.webp)](./notebooks/00_Spyglass_Smoke_Test.ipynb)

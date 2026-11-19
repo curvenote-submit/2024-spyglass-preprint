@@ -28,7 +28,7 @@ can try the framework without installing anything.
 
 The paper argues that neuroscience needs shareable, reproducible analysis pipelines.
 This site aims to practice what the paper preaches: the tutorials are not just
-described, but can be run and inspected directly. See [Tutorial 101](./tutorial-101.md) for
+described, but can be run and inspected directly. See [Using this Tutorial](./using-this-tutorial.md) for
 what runs here.
 
 **Looking for the paper itself?** Read the full preprint on bioRxiv:
@@ -115,8 +115,8 @@ deviation from the animal's true position, despite leaving single-neuron spatial
 unaffected — illustrating how a shared, reproducible pipeline can both replicate prior
 results and surface new findings from existing data.
 
-:::{card} Next: Tutorial 101 →
-:link: ./tutorial-101.md
+:::{card} Next: Using this Tutorial →
+:link: ./using-this-tutorial.md
 
 Try Spyglass yourself. Find out which tutorial notebooks run from this site, how to launch
 them, and where to start.

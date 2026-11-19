@@ -1,5 +1,5 @@
 ---
-title: Tutorial 101
+title: Using this Tutorial
 ---
 
 The Spyglass tutorial notebooks walk through every pipeline end to end, from setup and

@@ -140,6 +140,8 @@ project:
   doi: 10.1101/2024.01.25.577295
   license: CC-BY-NC-4.0
   github: https://github.com/LorenFrankLab/spyglass
+  bibliography:
+    - references.bib
   downloads:
     - title: "Spyglass Preprint PDF"
       url: https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5.full.pdf

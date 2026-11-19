@@ -21,7 +21,7 @@ abstract: >-
 
 This site is an **interactive companion** to the preprint
 [*"Spyglass: a framework for reproducible and shareable neuroscience research"*](https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5)
-(Lee, Denovellis, et al., bioRxiv, 2024). The preprint describes Spyglass; this site
+[@Lee2024spyglass]. The preprint describes Spyglass; this site
 lets you use it. It brings together the Spyglass tutorial notebooks, which walk through
 every pipeline the paper describes, and a ready-made environment to run them in, so you
 can try the framework without installing anything.

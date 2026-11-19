@@ -26,11 +26,6 @@ lets you use it. It brings together the Spyglass tutorial notebooks, which walk 
 every pipeline the paper describes, and a ready-made environment to run them in, so you
 can try the framework without installing anything.
 
-The notebooks come from Spyglass at commit
-[`6122f07`](https://github.com/LorenFrankLab/spyglass/commit/6122f076918cb0bbda220d71419848e9d71150a7),
-the code described in version 5 of the preprint. Where a notebook was changed to run in
-the hosted environment, the change is marked **Binder hub:**.
-
 The paper argues that neuroscience needs shareable, reproducible analysis pipelines.
 This site aims to practice what the paper preaches: the tutorials are not just
 described, but can be run and inspected directly. See [Notebooks](#notebooks) below for
@@ -127,6 +122,11 @@ The Spyglass tutorial notebooks walk through every pipeline end to end, from set
 data ingestion through spike sorting, position tracking, LFP analysis, and neural
 decoding. They are listed in the navigation, grouped by pipeline. Every notebook can be
 read here; most can also be run from here.
+
+The notebooks come from Spyglass at commit
+[`6122f07`](https://github.com/LorenFrankLab/spyglass/commit/6122f076918cb0bbda220d71419848e9d71150a7),
+the code described in version 5 of the preprint. Where a notebook was changed to run in
+the hosted environment, the change is marked **Binder hub:**.
 
 ### Running them from this site
 

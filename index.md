@@ -26,6 +26,14 @@ lets you use it. It brings together the Spyglass tutorial notebooks, which walk 
 every pipeline the paper describes, and a ready-made environment to run them in, so you
 can try the framework without installing anything.
 
+**TL;DR:**
+
+:::{launch-jupyter}
+Start a dedicated Jupyter server on BinderHub where you can run the notebooks in this
+tutorial. It opens `00_Spyglass_Smoke_Test` first, to check that the server is ready; then
+work through the tutorials in order.
+:::
+
 The paper argues that neuroscience needs shareable, reproducible analysis pipelines.
 This site aims to practice what the paper preaches: the tutorials are not just
 described, but can be run and inspected directly. See [Using this Tutorial](./using-this-tutorial.md) for
@@ -33,9 +41,6 @@ what runs here.
 
 **Looking for the paper itself?** Read the full preprint on bioRxiv:
 [biorxiv.org/content/10.1101/2024.01.25.577295v5](https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5)
-
-:::{launch-jupyter}
-:::
 
 ## What is Spyglass?
 

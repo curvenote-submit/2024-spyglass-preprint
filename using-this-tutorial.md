@@ -62,6 +62,6 @@ downloadable MECA bundle, under `binder/`.
 
 :::{launch-jupyter}
 Start a dedicated Jupyter server on BinderHub where you can run the notebooks in this
-article. It opens `00_Spyglass_Smoke_Test` first, to check that the server is ready; then
+tutorial. It opens `00_Spyglass_Smoke_Test` first, to check that the server is ready; then
 work through the tutorials in order.
 :::

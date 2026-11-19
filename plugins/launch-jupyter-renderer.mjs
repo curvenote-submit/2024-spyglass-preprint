@@ -30,6 +30,8 @@ export default function ASTRenderer({ React, ASTComponent }) {
   }
 
   function LaunchJupyter({ node, className }) {
+    const [hover, setHover] = React.useState(false);
+    const transition = 'all 150ms ease';
     return h(
       'a',
       {
@@ -37,15 +39,22 @@ export default function ASTRenderer({ React, ASTComponent }) {
         target: '_blank',
         rel: 'noopener noreferrer',
         className,
+        onMouseEnter: () => setHover(true),
+        onMouseLeave: () => setHover(false),
+        onFocus: () => setHover(true),
+        onBlur: () => setHover(false),
         style: {
           display: 'flex',
           alignItems: 'center',
           gap: '1rem',
           margin: '1.5rem 0',
           padding: '1rem 1.25rem',
-          border: '1px solid rgba(37, 99, 235, 0.45)',
+          border: `1px solid rgba(37, 99, 235, ${hover ? 0.8 : 0.45})`,
           borderRadius: '0.75rem',
-          background: 'rgba(37, 99, 235, 0.08)',
+          background: `rgba(37, 99, 235, ${hover ? 0.14 : 0.08})`,
+          boxShadow: hover ? '0 6px 16px rgba(37, 99, 235, 0.2)' : 'none',
+          transform: hover ? 'translateY(-2px)' : 'none',
+          transition,
           color: 'inherit',
           textDecoration: 'none',
         },
@@ -61,8 +70,10 @@ export default function ASTRenderer({ React, ASTComponent }) {
             width: '3rem',
             height: '3rem',
             borderRadius: '9999px',
-            background: 'rgba(37, 99, 235, 0.15)',
+            background: `rgba(37, 99, 235, ${hover ? 0.25 : 0.15})`,
             color: '#3b82f6',
+            transform: hover ? 'rotate(-12deg) scale(1.08)' : 'none',
+            transition,
           },
         },
         h(RocketIcon),
@@ -74,7 +85,19 @@ export default function ASTRenderer({ React, ASTComponent }) {
           'span',
           { style: { display: 'block', fontWeight: 700, fontSize: '1.15rem' } },
           node.title,
-          ' →',
+          h(
+            'span',
+            {
+              'aria-hidden': true,
+              style: {
+                display: 'inline-block',
+                marginLeft: '0.35em',
+                transform: hover ? 'translateX(4px)' : 'none',
+                transition,
+              },
+            },
+            '→',
+          ),
         ),
         h(
           'span',

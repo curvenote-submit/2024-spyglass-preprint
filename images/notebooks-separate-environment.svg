@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 642" width="960" height="642" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-labelledby="t">
+<title id="t">Needs a separate environment</title>
+<rect width="960" height="642" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+<rect x="20" y="20" width="22" height="16" rx="5" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="52" y="34" font-size="18" font-weight="700" fill="#0f172a">Needs a separate environment</text>
+<text x="20" y="58" font-size="13" fill="#475569">Read these here, and run them in your own Spyglass installation.</text>
+<text x="20" y="90" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#64748b">SECTION</text>
+<text x="170" y="90" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#64748b">NOTEBOOK</text>
+<text x="380" y="90" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#64748b">WHAT IT DOES AND NEEDS</text>
+<line x1="20" y1="98" x2="940" y2="98" stroke="#e2e8f0"/>
+<rect x="8" y="102" width="944" height="116" rx="8" fill="#f8fafc"/>
+<text x="20" y="132.0" font-size="14" font-weight="700" fill="#0f172a">Getting started</text>
+<rect x="170" y="108" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="132" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">00</tspan>  Hub quick start</text>
+<text x="380" y="123" font-size="13" fill="#334155">A quick tour of Spyglass on a ready-made database.</text>
+<text x="380" y="141" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> A pre-populated database and the 32 GB recording.</text>
+<rect x="170" y="166" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="190" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">03</tspan>  Data sync</text>
+<text x="380" y="181" font-size="13" fill="#334155">Shares files and results between Spyglass users with Kachery.</text>
+<text x="380" y="199" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> A lab&#x27;s Kachery zone, credentials and shared database.</text>
+<text x="20" y="248.0" font-size="14" font-weight="700" fill="#0f172a">Spike sorting</text>
+<rect x="170" y="224" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="248" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">11</tspan>  Sorting analysis</text>
+<text x="380" y="239" font-size="13" fill="#334155">Organizes sorted units and their annotations for later analyses.</text>
+<text x="380" y="257" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> The 32 GB recording.</text>
+<rect x="170" y="282" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="306" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">12</tspan>  Burst merge</text>
+<text x="380" y="297" font-size="13" fill="#334155">Curates units by merging those split by bursting.</text>
+<text x="380" y="315" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> A Frank Lab recording.</text>
+<rect x="8" y="334" width="944" height="116" rx="8" fill="#f8fafc"/>
+<text x="20" y="364.0" font-size="14" font-weight="700" fill="#0f172a">Position</text>
+<rect x="170" y="340" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="364" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">21</tspan>  DeepLabCut</text>
+<text x="380" y="355" font-size="13" fill="#334155">Trains a DeepLabCut pose model and estimates position from video.</text>
+<text x="380" y="373" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> DeepLabCut, a GPU and Frank Lab recordings.</text>
+<rect x="170" y="398" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="422" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">22</tspan>  DLC loop</text>
+<text x="380" y="413" font-size="13" fill="#334155">Runs DeepLabCut pose estimation for every epoch of a day.</text>
+<text x="380" y="431" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> DeepLabCut, a GPU and Frank Lab recordings.</text>
+<text x="20" y="480.0" font-size="14" font-weight="700" fill="#0f172a">LFP</text>
+<rect x="170" y="456" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="480" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">32</tspan>  Ripples</text>
+<text x="380" y="471" font-size="13" fill="#334155">Detects sharp-wave ripples from the LFP.</text>
+<text x="380" y="489" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> The 32 GB recording.</text>
+<rect x="8" y="508" width="944" height="116" rx="8" fill="#f8fafc"/>
+<text x="20" y="538.0" font-size="14" font-weight="700" fill="#0f172a">More analyses</text>
+<rect x="170" y="514" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="538" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">50</tspan>  MUA detection</text>
+<text x="380" y="529" font-size="13" fill="#334155">Detects multiunit activity events.</text>
+<text x="380" y="547" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> The 32 GB recording.</text>
+<rect x="170" y="572" width="186" height="38" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="182" y="596" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">60</tspan>  MoSeq</text>
+<text x="380" y="587" font-size="13" fill="#334155">Extracts behavioural syllables from keypoint pose estimates.</text>
+<text x="380" y="605" font-size="12.5" fill="#475569"><tspan font-weight="700">Needs:</tspan> keypoint-MoSeq and a Frank Lab recording.</text>
+</svg>

@@ -34,9 +34,8 @@ what runs here.
 **Looking for the paper itself?** Read the full preprint on bioRxiv:
 [biorxiv.org/content/10.1101/2024.01.25.577295v5](https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5)
 
-**TL;DR:** open the smoke test and press **Start and Run**.
-
-[![The Spyglass smoke test page, with its Start and Run button](./tldr-go-to-smoke-test.webp)](./notebooks/00_Spyglass_Smoke_Test.ipynb)
+:::{launch-jupyter}
+:::
 
 ## What is Spyglass?
 

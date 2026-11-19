@@ -60,7 +60,8 @@ downloadable MECA bundle, under `binder/`.
 
 ## Start here
 
-Open the smoke test and press **Start and Run** to launch your server and check that it's
-ready. Then work through the tutorials in order.
-
-[![The Spyglass smoke test page, with its Start and Run button](./tldr-go-to-smoke-test.webp)](./notebooks/00_Spyglass_Smoke_Test.ipynb)
+:::{launch-jupyter}
+Start a dedicated Jupyter server on BinderHub where you can run the notebooks in this
+article. It opens `00_Spyglass_Smoke_Test` first, to check that the server is ready; then
+work through the tutorials in order.
+:::

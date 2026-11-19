@@ -142,6 +142,8 @@ project:
   github: https://github.com/LorenFrankLab/spyglass
   bibliography:
     - references.bib
+  plugins:
+    - plugins/launch-jupyter.mjs
   downloads:
     - title: "Spyglass Preprint PDF"
       url: https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5.full.pdf

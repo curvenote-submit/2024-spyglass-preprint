@@ -156,6 +156,9 @@ project:
         - https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5
   # Bundled into the MECA export, from which the BinderHub image is built.
   # Notebooks are bundled because they are in the toc.
+  jupyter:
+    binder:
+      url: https://hhmi-frank-4eg38zi9.curvenote.dev/
   requirements:
     - binder/*
     - dj_local_conf.json
@@ -171,8 +174,6 @@ project:
     - file: using-this-tutorial.md
     - title: Getting Started
       children:
-        - file: notebooks/00_HubQuickStart.ipynb
-        - file: notebooks/00_Setup.ipynb
         - file: notebooks/00_Spyglass_Smoke_Test.ipynb
         - file: notebooks/01_Concepts.ipynb
         - file: notebooks/02_Insert_Data.ipynb
@@ -207,6 +208,10 @@ project:
     - title: Behavior Syllables
       children:
         - file: notebooks/60_MoSeq.ipynb
+    - title: Reference
+      children:
+        - file: notebooks/00_HubQuickStart.ipynb
+        - file: notebooks/00_Setup.ipynb
     - file: data-review.md
 site:
   template: article-theme

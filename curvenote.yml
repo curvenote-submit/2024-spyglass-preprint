@@ -166,6 +166,7 @@ project:
       format: meca
   toc:
     - file: index.md
+    - file: tutorial-101.md
     - title: Getting Started
       children:
         - file: notebooks/00_HubQuickStart.ipynb

@@ -115,6 +115,13 @@ deviation from the animal's true position, despite leaving single-neuron spatial
 unaffected — illustrating how a shared, reproducible pipeline can both replicate prior
 results and surface new findings from existing data.
 
+:::{card} Next: Tutorial 101 →
+:link: ./tutorial-101.md
+
+Try Spyglass yourself. Find out which tutorial notebooks run from this site, how to launch
+them, and where to start.
+:::
+
 ## Links & resources
 
 - Original preprint (bioRxiv): [10.1101/2024.01.25.577295v5](https://www.biorxiv.org/content/10.1101/2024.01.25.577295v5)

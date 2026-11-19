@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 590" width="960" height="590" font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">Spyglass tutorial notebooks</title>
+<desc id="d">The tutorial notebooks grouped by pipeline, in the order to run them. Green notebooks run on this site; dashed grey notebooks need a separate environment.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#94a3b8"/></marker></defs>
+<rect width="960" height="590" rx="14" fill="#ffffff" stroke="#e2e8f0"/>
+<text x="20" y="34" font-size="18" font-weight="700" fill="#0f172a">Tutorial notebooks</text>
+<text x="20" y="56" font-size="13" fill="#475569">Run left to right, top to bottom. Every notebook can be read on this site.</text>
+<rect x="520" y="24" width="22" height="16" rx="5" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="550" y="37" font-size="13" fill="#334155">Runs on this site</text>
+<rect x="690" y="24" width="22" height="16" rx="5" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="4 3"/>
+<text x="720" y="37" font-size="13" fill="#334155">Needs a separate environment</text>
+<line x1="20" y1="72" x2="940" y2="72" stroke="#e2e8f0"/>
+<rect x="8" y="82" width="944" height="70" rx="8" fill="#f8fafc"/>
+<text x="20" y="115.0" font-size="14" font-weight="700" fill="#0f172a">Getting started</text>
+<text x="20" y="132.0" font-size="12" fill="#64748b">do these first</text>
+<rect x="150" y="92" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="162" y="113" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">00</tspan>  Smoke test</text>
+<text x="162" y="131" font-size="11.5" fill="#3f6f52">is the server ready?</text>
+<line x1="292" y1="117.0" x2="309" y2="117.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="312" y="92" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="324" y="113" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">01</tspan>  Concepts</text>
+<text x="324" y="131" font-size="11.5" fill="#3f6f52">how Spyglass works</text>
+<line x1="454" y1="117.0" x2="471" y2="117.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="474" y="92" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="486" y="113" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">02</tspan>  Insert data</text>
+<text x="486" y="131" font-size="11.5" fill="#3f6f52">loads minirec</text>
+<line x1="616" y1="117.0" x2="633" y2="117.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="636" y="92" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="648" y="113" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">04</tspan>  Merge tables</text>
+<text x="648" y="131" font-size="11.5" fill="#3f6f52">answer no to delete</text>
+<line x1="778" y1="117.0" x2="795" y2="117.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="798" y="92" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="810" y="113" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">05</tspan>  Export</text>
+<text x="810" y="131" font-size="11.5" fill="#3f6f52">skips DANDI upload</text>
+<text x="20" y="192.0" font-size="14" font-weight="700" fill="#0f172a">Spike sorting</text>
+<rect x="150" y="162" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="162" y="183" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">10</tspan>  Sorting V1</text>
+<text x="162" y="201" font-size="11.5" fill="#3f6f52">FigURL view off</text>
+<line x1="292" y1="187.0" x2="309" y2="187.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="312" y="162" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="324" y="183" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">11</tspan>  Analysis</text>
+<text x="324" y="201" font-size="11.5" fill="#64748b">needs 32 GB data</text>
+<line x1="454" y1="187.0" x2="471" y2="187.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="474" y="162" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="486" y="183" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">12</tspan>  Burst merge</text>
+<text x="486" y="201" font-size="11.5" fill="#64748b">needs Frank Lab data</text>
+<rect x="644" y="162" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="656" y="183" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">10</tspan>  Sorting V0</text>
+<text x="656" y="201" font-size="11.5" fill="#3f6f52">legacy pipeline</text>
+<rect x="8" y="222" width="944" height="70" rx="8" fill="#f8fafc"/>
+<text x="20" y="262.0" font-size="14" font-weight="700" fill="#0f172a">Position</text>
+<rect x="150" y="232" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="162" y="253" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">20</tspan>  Position</text>
+<text x="162" y="271" font-size="11.5" fill="#3f6f52">Trodes tracking</text>
+<line x1="292" y1="257.0" x2="309" y2="257.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="312" y="232" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="324" y="262" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">24</tspan>  Linearization</text>
+<rect x="482" y="232" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="494" y="253" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">21</tspan>  DeepLabCut</text>
+<text x="494" y="271" font-size="11.5" fill="#64748b">needs a GPU</text>
+<line x1="624" y1="257.0" x2="641" y2="257.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="644" y="232" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="656" y="253" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">22</tspan>  DLC loop</text>
+<text x="656" y="271" font-size="11.5" fill="#64748b">needs a GPU</text>
+<text x="20" y="332.0" font-size="14" font-weight="700" fill="#0f172a">LFP</text>
+<rect x="150" y="302" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="162" y="332" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">30</tspan>  LFP</text>
+<line x1="292" y1="327.0" x2="309" y2="327.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="312" y="302" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="324" y="332" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">31</tspan>  Theta</text>
+<line x1="454" y1="327.0" x2="471" y2="327.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="474" y="302" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="486" y="323" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">32</tspan>  Ripples</text>
+<text x="486" y="341" font-size="11.5" fill="#64748b">needs 32 GB data</text>
+<rect x="8" y="362" width="944" height="70" rx="8" fill="#f8fafc"/>
+<text x="20" y="395.0" font-size="14" font-weight="700" fill="#0f172a">Decoding</text>
+<text x="20" y="412.0" font-size="12" fill="#64748b">uses 10 + 20</text>
+<rect x="150" y="372" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="162" y="393" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">40</tspan>  Waveforms</text>
+<text x="162" y="411" font-size="11.5" fill="#3f6f52">~15 min</text>
+<line x1="292" y1="397.0" x2="309" y2="397.0" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="312" y="372" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="324" y="393" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">41</tspan>  Clusterless</text>
+<text x="324" y="411" font-size="11.5" fill="#3f6f52">illustrative only</text>
+<rect x="482" y="372" width="140" height="50" rx="10" fill="#e7f6ee" stroke="#1f9d55" stroke-width="1.5"/>
+<text x="494" y="393" font-size="14" font-weight="700" fill="#14532d"><tspan fill="#15803d">42</tspan>  Sorted spikes</text>
+<text x="494" y="411" font-size="11.5" fill="#3f6f52">illustrative only</text>
+<text x="20" y="472.0" font-size="14" font-weight="700" fill="#0f172a">More analyses</text>
+<rect x="150" y="442" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="162" y="463" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">50</tspan>  MUA detection</text>
+<text x="162" y="481" font-size="11.5" fill="#64748b">needs 32 GB data</text>
+<rect x="320" y="442" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="332" y="463" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">60</tspan>  MoSeq</text>
+<text x="332" y="481" font-size="11.5" fill="#64748b">needs keypoint-MoSeq</text>
+<rect x="8" y="502" width="944" height="70" rx="8" fill="#f8fafc"/>
+<text x="20" y="542.0" font-size="14" font-weight="700" fill="#0f172a">Lab setup</text>
+<rect x="150" y="512" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="162" y="533" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">00</tspan>  Hub quick start</text>
+<text x="162" y="551" font-size="11.5" fill="#64748b">needs a lab database</text>
+<rect x="320" y="512" width="140" height="50" rx="10" fill="#f5f6f8" stroke="#a3acb9" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="332" y="533" font-size="14" font-weight="700" fill="#334155"><tspan fill="#64748b">03</tspan>  Data sync</text>
+<text x="332" y="551" font-size="11.5" fill="#64748b">needs lab Kachery</text>
+</svg>

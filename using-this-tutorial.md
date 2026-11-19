@@ -12,6 +12,14 @@ The notebooks come from Spyglass at commit
 the code described in version 5 of the preprint. Where a notebook was changed to run in
 the hosted environment, the change is marked **Binder hub:**.
 
+:::{figure} ./images/notebook-workflow.svg
+:label: fig-notebook-workflow
+:alt: The tutorial notebooks grouped by pipeline, in the order to run them. Green notebooks run on this site; dashed grey notebooks need a separate environment, with the reason under each.
+
+The tutorial notebooks by pipeline, in the order to run them. Green notebooks run on
+this site; grey ones need a separate environment.
+:::
+
 ## Running them from this site
 
 When you launch the notebooks from this site, you get your own temporary Jupyter server

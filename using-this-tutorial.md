@@ -35,6 +35,11 @@ any files you create are deleted when the server stops, after an hour without us
 server starts with an empty database, so start again from `02_Insert_Data`. Running every
 notebook below takes about 22 minutes, most of it in notebook 40.
 
+:::{figure #fig-notebooks-on-site alt="The notebooks that run on this site, by section, with what each one does and any changes made for this site."} ./images/notebooks-on-site.svg
+The notebooks that run on this site, with what each one does. Green notes say what
+differs on this site.
+:::
+
 | Runs from this site | Notes |
 |---|---|
 | `01_Concepts`, `02_Insert_Data`, `04_Merge_Tables`, `05_Export` | `02` skips its optional 5 GB DANDI example and `05` skips the DANDI upload. The last cell of `04` deletes the session after asking you to confirm: answer **no** to continue with the later notebooks. |
@@ -49,14 +54,16 @@ These notebooks need data, hardware or lab infrastructure the hosted servers don
 have. Each has a note at the top saying why. You can still read them here, and run them
 in your own Spyglass installation.
 
-| Notebook | Needs |
-|---|---|
-| `00_HubQuickStart` | A pre-populated database and the full `mediumnwb20230802.nwb` recording (32 GB) |
-| `03_Data_Sync` | A lab's Kachery zone, credentials and shared database |
-| `11_Spike_Sorting_Analysis`, `32_Ripple_Detection`, `50_MUA_Detection` | The full `mediumnwb20230802.nwb` recording (32 GB) |
-| `12_Burst_Merge_Curation` | A Frank Lab recording |
-| `21_DLC`, `22_DLC_Loop` | DeepLabCut, a GPU and Frank Lab recordings |
-| `60_MoSeq` | keypoint-MoSeq and a Frank Lab recording |
+:::{figure #fig-notebooks-separate-environment alt="The notebooks that need a separate environment, by section, with what each one does and what it needs."} ./images/notebooks-separate-environment.svg
+The notebooks that need a separate environment, with what each one does and needs.
+:::
+
+To set up that environment, follow [Local Machine Setup](./notebooks/00_Setup.ipynb). It
+covers installing Spyglass, the optional dependencies these notebooks use (DeepLabCut,
+keypoint-MoSeq, and `jax` for decoding on a GPU), and setting up a database, either your
+own with Docker or an existing lab server. The 32 GB `mediumnwb20230802.nwb` recording is
+linked from [Insert Data](./notebooks/02_Insert_Data.ipynb). The Frank Lab recordings
+used by `12`, `21`, `22` and `60` aren't linked from the notebooks.
 
 ## Running Spyglass on your own machine
 
